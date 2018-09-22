@@ -1,0 +1,12 @@
+<div class="border-1 border-red">
+  <label for="">Creador de parrafos</label>
+  <input type="text" class="form-control" [(ngModel)]="paragraphContent">
+  <br>
+  <button class="btn btn-primary" [disabled]='isDisabled' (click)="createParagraph()">Crear parrafo</button>
+  <button class="btn btn-danger" [disabled]='isDisabled' (click)="clearParagraph()">Borrar parrafo</button>
+  <br>
+  <p *ngIf="paragraphCreated">El contenido del parrafo es: {{ paragraphContent }}</p>
+
+</div>
+  
+  
