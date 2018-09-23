@@ -21,7 +21,14 @@
       <app-ng-if></app-ng-if>
 
       <span class="bg-red">ngStyle (Directiva de atributos)</span>
-      
+      <div class="border-1 border-red">
+        <p>El color cambia ya que a traves de la directiva ngStyle estamos afectando las propiedades CSS del elemento:</p>
+        <code> < p [ngStyle]="{{ '{' }} 'background': getColor() {{'}'}}"></code>
+        <app-ng-style></app-ng-style>
+        <app-ng-style></app-ng-style>
+      </div>
+
+      <span class="bg-red">ngClass (Directiva de atributos)</span>
     </div>
   </div>
 </div>

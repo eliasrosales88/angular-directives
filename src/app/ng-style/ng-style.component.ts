@@ -5,11 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ng-style.component.html',
   styleUrls: ['./ng-style.component.css']
 })
-export class NgStyleComponent implements OnInit {
+export class NgStyleComponent {
+  randomNumber = Math.random();
+  colorStatus: string = 'rojo';
 
-  constructor() { }
+  constructor() {
+    this.colorStatus = this.randomNumber > 0.5 ? 'verde' : 'rojo';
+   }
 
-  ngOnInit() {
+
+
+  getColorStatus(){
+    return this.colorStatus;
   }
-
+  getColor(){
+    
+    return this.colorStatus === 'verde' ? 'green': 'red';
+  }
 }
