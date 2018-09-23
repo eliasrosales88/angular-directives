@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { NgStyleComponent } from './ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgIfComponent
+    NgIfComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,

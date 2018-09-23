@@ -1,12 +1,22 @@
 <div class="border-1 border-red">
+  <p>Las directivas de estructura crean o eliminan elementos del DOM. Un elemento que use ngIF no existira en el DOM a menos que su condicion se cumpla. No estara oculta, simplemento no existira.</p>
   <label for="">Creador de parrafos</label>
   <input type="text" class="form-control" [(ngModel)]="paragraphContent">
   <br>
   <button class="btn btn-primary" [disabled]='isDisabled' (click)="createParagraph()">Crear parrafo</button>
   <button class="btn btn-danger" [disabled]='isDisabled' (click)="clearParagraph()">Borrar parrafo</button>
   <br>
-  <p *ngIf="paragraphCreated">El contenido del parrafo es: {{ paragraphContent }}</p>
+  <p *ngIf="paragraphCreated; else noParagraph">El contenido del parrafo es: {{ paragraphContent }}</p>
+  <ng-template #noParagraph>
+    <p>No hay ningun parrafo con tu contenido. Por favor, escribe algo en la casilla superior y presiona el boton "Crear parrafo"</p>
+  </ng-template>
 
+  <p>Para realizar esta funcion se usa la directiva ngIf en la plantilla html de la siguiente manera:</p>
+  <code> < p *ngIf="paragraphCreated; else noParagraph" >El contenido del parrafo es: {{ "paragraphContent" }}< /p > </code>
+  <p>Donde "paragraphCreated" es una propiedad de la clase <b>NgIfComponent</b>:</p>
+  <code>{{'export class NgIfComponent implements OnInit {'}}</code><br>
+  <code>{{'paragraphCreated = false;'}}</code><br>
+  <code>{{'}'}}</code>
 </div>
   
   
