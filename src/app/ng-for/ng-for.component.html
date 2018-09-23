@@ -1,0 +1,5 @@
+<p>Al presionar el boton se inyecta un elemento nuevo a un array y se muestra en pantalla</p>
+<button class="btn btn-primary" (click)="addComponent()">+ Componente</button>
+<app-demo *ngFor="let array of array; let i=index"><span>{{ i+1 }}</span></app-demo>
+
+    
