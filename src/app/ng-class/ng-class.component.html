@@ -1,0 +1,8 @@
+<div class="border-1 border-red">
+  <h3 [ngClass]="{'title-color': true}">Este titulo era negro</h3>
+  <p>El titulo ha cambiado de color porque se ha inyectado una clase a traves de la directiva ngClass de la siguiente maenera:</p>
+  <code>< h3 [ngClass]="{{'{'}}'title-color': true{{'}'}}">Este titulo era negro< /h3></code><br><br>
+  <p>Donde <b>title-color</b> es la clase que se inyecta si la condicion que tengamos en nuestro archivo TS devuelve <b>true</b>. En este caso se puso directamente true.</p>
+</div>
+    
+    
