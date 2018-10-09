@@ -1,0 +1,21 @@
+<span class="bg-purple">Creacion de una directiva basica</span>
+<div class="border-1 border-purple">
+  <p>Esta directiva tiene el unico objetivo de resaltar parrafos en verde:</p>
+  <p>La etiqueta con la directiva es:</p>
+  <code>< p <b>appBasic</b>>Texto... < /p></code>
+  <h4>El resultado de la etiqueta es:</h4>
+  <p appBasic>Este parrafo ha sido resaltado en verde ya que tiene una directiva que accede a la propiedad del elemento donde que se le coloca la directiva </p>
+  <p>El codigo de la directiva es sencillo:</p>
+  <pre>{{"import { Directive, ElementRef, OnInit } from '@angular/core';"}}</pre>
+  <pre>{{"@Directive({
+    selector: '[appBasic]'
+  })"}}</pre>
+  <pre>{{"export class BasicDirective implements OnInit {
+
+      constructor( private elementRef:ElementRef) { }
+    
+      ngOnInit(){
+        this.elementRef.nativeElement.style.backgroundColor = 'lightgreen';
+      }
+    }"}}</pre>
+</div>

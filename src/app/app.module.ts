@@ -8,6 +8,8 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { DemoComponent } from './demo/demo.component';
+import { BasicDirective } from './basic.directive';
+import { BasicExampleDirectiveComponent } from './basic-example-directive/basic-example-directive.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DemoComponent } from './demo/demo.component';
     NgStyleComponent,
     NgClassComponent,
     NgForComponent,
-    DemoComponent
+    DemoComponent,
+    BasicDirective,
+    BasicExampleDirectiveComponent
   ],
   imports: [
     BrowserModule,
