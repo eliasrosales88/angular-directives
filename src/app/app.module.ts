@@ -10,6 +10,9 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { DemoComponent } from './demo/demo.component';
 import { BasicDirective } from './basic.directive';
 import { BasicExampleDirectiveComponent } from './basic-example-directive/basic-example-directive.component';
+import { BetterApproachDirective } from './better-approach.directive';
+import { BetterApproachExampleDirectiveComponent } from './better-approach-example-directive/better-approach-example-directive.component';
+import { HostlistenerDecoratorDirective } from './hostlistener-decorator.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { BasicExampleDirectiveComponent } from './basic-example-directive/basic-
     NgForComponent,
     DemoComponent,
     BasicDirective,
-    BasicExampleDirectiveComponent
+    BasicExampleDirectiveComponent,
+    BetterApproachDirective,
+    BetterApproachExampleDirectiveComponent,
+    HostlistenerDecoratorDirective
   ],
   imports: [
     BrowserModule,

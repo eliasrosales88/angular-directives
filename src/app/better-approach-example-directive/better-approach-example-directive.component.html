@@ -1,0 +1,40 @@
+<span class="bg-purple">Creacion de una directiva usando Renderer2 | @HostListener | @HostBinding ----- <i>RenderedV2 esta obsoleto</i></span>
+<div class="border-1 border-purple">
+  <h4>El codigo de la directiva que usa <b>Renderer2</b> es:</h4>
+  <p appBetterApproach> Este parrafo esta usando el metodo setStyle() ya que hemos instanciado la clase Renderer2 dentro del argumento del constructor de la directiva</p>
+<code> {{"< p appBetterApproach> texto...< / p>"}}</code>
+<pre>{{"import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';"}}</pre>
+<pre>{{"@Directive({
+    selector: '[appBetterApproach]'
+  })"}}</pre>
+<pre>{{"export class BetterApproachDirective implements OnInit {
+
+    constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+  
+    ngOnInit(){
+      this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'lightblue');
+    }
+  }"}}</pre>
+
+  <h4>El codigo de la directiva que usa los decoradores <b>@HostListener y @HostBinding</b> es:</h4>
+  <p appHostlistenerDecorator>Este parrafo cambia de color al pasar el cursor por encima gracias a los decoradores @HostListener y @HostBinding</p>
+  <code> {{"< p appHostlistenerDecorator> texto...< / p>"}}</code>
+  <pre>{{"import { Directive, HostListener, HostBinding } from '@angular/core';"}}</pre>
+  <pre>{{"@Directive({
+      selector: '[appHostlistenerDecorator]'
+    })"}}</pre>
+  <pre>{{"export class HostlistenerDecoratorDirective {
+  @HostBinding('style.backgroundColor') backgroundColor: string = 'lightgreen';
+
+  constructor() { }
+  
+  @HostListener('mouseenter') mouseenter(eventData: Event){
+    this.backgroundColor = 'lightblue';
+  }
+  
+  @HostListener('mouseleave') mouseleave(eventData: Event){
+    this.backgroundColor = 'lightgreen';
+  }
+}"}}</pre>
+
+</div>
